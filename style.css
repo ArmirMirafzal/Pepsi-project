@@ -1,0 +1,50 @@
+/* Main */
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 20px 20px 60px;
+}
+
+.main-heading {
+  font-size: 60px;
+  width: 420px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.main-heading span {
+  font-size: 100px;
+}
+
+.main-text {
+  width: 580px;
+  color: #fff;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.main-btn {
+  background-color: #fff;
+  border: 1.5px solid #fff;
+  border-radius: 30px;
+  padding: 16px 26px 14px 26px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.main-btn:hover {
+  background-color: #0062be;
+  color: #fff;
+}
+
+.main-right .main-img {
+  background: url("./images/pepsi001.png");
+}
