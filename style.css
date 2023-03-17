@@ -1,17 +1,56 @@
-/* Main */
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0062be;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 140px;
+  padding-top: 10px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 40px;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+/* main */
 
 main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 50px 20px 20px 60px;
+  margin: 40px 100px 0 140px;
 }
 
 .main-heading {
   font-size: 60px;
   width: 420px;
-  line-height: 1.05;
   text-transform: uppercase;
+  line-height: 1.05;
   color: #fff;
   margin-bottom: 10px;
 }
@@ -22,22 +61,28 @@ main {
 
 .main-text {
   width: 580px;
-  color: #fff;
   line-height: 1.6;
-  font-weight: 400;
-  margin-bottom: 15px;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 .main-btn {
-  background-color: #fff;
-  border: 1.5px solid #fff;
+  border: 2px solid #fff;
   border-radius: 30px;
-  padding: 16px 26px 14px 26px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
+  padding: 14px 30px 12px 30px;
   cursor: pointer;
   transition: 0.3s linear;
+}
+
+/* main-right */
+
+.main-right {
+  display: flex;
+  align-items: center;
+  gap: 80px;
 }
 
 .main-btn:hover {
@@ -46,5 +91,30 @@ main {
 }
 
 .main-right .main-img {
-  background: url("./images/pepsi001.png");
+  background-image: url(./images/pepsi002.png);
+  background-repeat: no-repeat;
+}
+
+.main-img .hidden-2 {
+  display: none;
+}
+
+.main-img .hidden-3 {
+  display: none;
+}
+
+.main-links {
+  display: grid;
+  row-gap: 30px;
+}
+
+.main-links i {
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.main-links i:hover {
+  color: #222;
 }
