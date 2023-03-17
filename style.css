@@ -111,11 +111,7 @@ main {
   color: #fff;
 }
 
-.main-img .hidden-2 {
-  display: none;
-}
-
-.main-img .hidden-3 {
+.main-img .hidden {
   display: none;
 }
 
