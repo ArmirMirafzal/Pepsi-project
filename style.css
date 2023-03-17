@@ -34,7 +34,23 @@ ul li {
 ul li a {
   text-decoration: none;
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
+  position: relative;
+}
+
+ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  background-color: rgb(211, 16, 40);
+  transition: 0.3s linear;
+}
+
+ul li a:hover::after {
+  width: 100%;
 }
 
 /* main */
@@ -43,7 +59,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 40px 100px 0 140px;
+  margin: 35px 100px 0 140px;
 }
 
 .main-heading {
@@ -85,14 +101,14 @@ main {
   gap: 80px;
 }
 
+.main-img img {
+  width: 266px;
+  height: 514px;
+}
+
 .main-btn:hover {
   background-color: #0062be;
   color: #fff;
-}
-
-.main-right .main-img {
-  background-image: url(./images/pepsi002.png);
-  background-repeat: no-repeat;
 }
 
 .main-img .hidden-2 {
@@ -116,11 +132,10 @@ main {
 }
 
 .main-links i:hover {
-  transform: translateY(-5px);
-  color: #222;
+  color: rgb(211, 16, 40);
 }
 
-.footer{
+.footer {
   width: 99vw;
   display: flex;
   align-items: center;
@@ -128,7 +143,13 @@ main {
   gap: 40px;
 }
 
-.footer img{
- width: 50px;
- height: auto;
+.footer img {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.footer img:hover {
+  transform: translateY(-10px);
 }
