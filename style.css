@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .footer{
     width: 99vw;
@@ -11,3 +12,43 @@
    width: 50px;
    height: auto;
 }
+=======
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0062be;
+  height: 100vh;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin:  0 160px;
+  padding-top: 20px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 40px;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+>>>>>>> 4bbd380d75825e628c036de41ad63b7a55684b54
