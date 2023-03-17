@@ -1,0 +1,13 @@
+
+.footer{
+    width: 99vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer img{
+   width: 50px;
+   height: auto;
+}
