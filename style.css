@@ -116,5 +116,6 @@ main {
 }
 
 .main-links i:hover {
+  transform: translateY(-5px);
   color: #222;
 }
