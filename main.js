@@ -4,24 +4,23 @@ const blackPepsi = document.querySelector(".black-pepsi");
 const pepsi1 = document.querySelector("#pepsi-1");
 const pepsi2 = document.querySelector("#pepsi-2");
 const pepsi3 = document.querySelector("#pepsi-3");
+const mainBtn = document.querySelector(".main-btn");
+
+function addRemoveHidden(add1, add2, remove, color) {
+  add1.classList.add("hidden");
+  add2.classList.add("hidden");
+  remove.classList.remove("hidden");
+  document.body.style.background = color;
+}
 
 bluePepsi.addEventListener("click", () => {
-  pepsi1.classList.remove("hidden");
-  pepsi3.classList.add("hidden");
-  pepsi2.classList.add("hidden");
-  document.body.style.background = "#0062be";
+  addRemoveHidden(pepsi2, pepsi3, pepsi1, "#0062be");
 });
 
 whitePepsi.addEventListener("click", () => {
-  pepsi1.classList.add("hidden");
-  pepsi3.classList.add("hidden");
-  pepsi2.classList.remove("hidden");
-  document.body.style.background = "rgb(230,12,45)";
+  addRemoveHidden(pepsi1, pepsi3, pepsi2, "rgb(230,12,45)");
 });
 
 blackPepsi.addEventListener("click", () => {
-  pepsi1.classList.add("hidden");
-  pepsi2.classList.add("hidden");
-  pepsi3.classList.remove("hidden");
-  document.body.style.background = "rgb(31,30,31)";
+  addRemoveHidden(pepsi1, pepsi2, pepsi3, "rgb(31,30,31)");
 });

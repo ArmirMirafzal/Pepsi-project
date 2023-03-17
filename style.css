@@ -12,23 +12,31 @@ body {
   height: 100vh;
 }
 
+/* navbar */
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 140px;
+  margin: 0 170px 0 140px;
   padding-top: 10px;
+}
+
+.navbar .page-logo {
+  width: 95px;
+  height: 95px;
 }
 
 ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 40px;
+  gap: 40px;
 }
 
 ul li {
   list-style: none;
+  transition: 0.3s linear;
 }
 
 ul li a {
@@ -38,19 +46,8 @@ ul li a {
   position: relative;
 }
 
-ul li a::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  background-color: rgb(211, 16, 40);
-  transition: 0.3s linear;
-}
-
-ul li a:hover::after {
-  width: 100%;
+ul li:hover {
+  transform: translateY(-5px);
 }
 
 /* main */
@@ -59,14 +56,15 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 35px 100px 0 140px;
+  flex-wrap: wrap;
+  margin: 25px 110px 0 140px;
 }
 
 .main-heading {
   font-size: 60px;
   width: 420px;
   text-transform: uppercase;
-  line-height: 1.05;
+  line-height: 1;
   color: #fff;
   margin-bottom: 10px;
 }
@@ -85,12 +83,17 @@ main {
 .main-btn {
   border: 2px solid #fff;
   border-radius: 30px;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 14px 30px 12px 30px;
+  padding: 12px 25px 12px 25px;
   cursor: pointer;
   transition: 0.3s linear;
+}
+
+.main-btn:hover {
+  background-color: transparent;
+  color: #fff;
 }
 
 /* main-right */
@@ -98,17 +101,13 @@ main {
 .main-right {
   display: flex;
   align-items: center;
-  gap: 80px;
+  gap: 100px;
 }
 
 .main-img img {
-  width: 266px;
-  height: 514px;
-}
-
-.main-btn:hover {
-  background-color: transparent;
-  color: #fff;
+  width: 250px;
+  height: 494px;
+  animation: animation 2s infinite linear;
 }
 
 .main-img .hidden {
@@ -128,8 +127,11 @@ main {
 }
 
 .main-links i:hover {
-  color: rgb(211, 16, 40);
+  /* color: rgb(230, 12, 45); */
+  scale: 1.5;
 }
+
+/* footer */
 
 .footer {
   width: 99vw;
@@ -148,4 +150,13 @@ main {
 
 .footer img:hover {
   transform: translateY(-10px);
+}
+
+@keyframes animation {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
 }
