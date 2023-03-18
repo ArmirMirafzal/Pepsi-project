@@ -50,6 +50,13 @@ ul li:hover {
   transform: translateY(-5px);
 }
 
+.bar{
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #fff;
+}
+
 /* main */
 
 main {
@@ -227,5 +234,40 @@ main {
   }
   .footer {
     display: none;
+  }
+}
+
+/* responsive Armir */
+
+@media (max-width: 865px) {
+  ul{
+    display: none;
+  }
+  .bar{
+    display: flex;
+    font-size: 35px;
+    cursor: pointer;
+    color: #fff;
+  }
+}
+
+@media (max-width: 750px) {
+  main {
+    margin: 25px 60px 0 60px;
+  }
+  .main-heading {
+    width: 100%;
+    font-size: 75px;
+    flex-wrap: wrap;
+  }
+  .main-heading span {
+    font-size: 75px;
+  }
+  .main-text {
+    width: 100%;
+  }
+  .main-center {
+    display: grid;
+    margin-left: unset;
   }
 }
