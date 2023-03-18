@@ -5,6 +5,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 body {
@@ -27,34 +29,75 @@ body {
   height: 95px;
 }
 
-ul {
+.page-menu {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
 }
 
-ul li {
-  list-style: none;
+.page-menu li {
   transition: 0.3s linear;
 }
 
-ul li a {
-  text-decoration: none;
+.page-menu li a {
   color: #fff;
   font-size: 18px;
   position: relative;
 }
 
-ul li:hover {
+.page-menu li:hover {
   transform: translateY(-5px);
 }
 
-.bar{
+.bar {
   display: none;
   font-size: 26px;
   cursor: pointer;
   color: #fff;
+}
+
+/* dropdown */
+
+.dropdown {
+  position: absolute;
+  top: 95px;
+  right: 70px;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 300px;
+  border-radius: 20px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s linear;
+  height: 0;
+  transition: 0.2s linear;
+  overflow: hidden;
+}
+
+.open {
+  height: 270px;
+}
+
+.dropdown li {
+  transition: 0.1s linear;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.dropdown li:hover {
+  background: orange;
+  text-align: center;
+}
+
+.dropdown li a {
+  color: #fff;
+  font-size: 18px;
+  position: relative;
 }
 
 /* main */
@@ -187,10 +230,10 @@ main {
 
 @media (max-width: 1300px) {
   .navbar {
-    margin: 0 120px 0 90px;
+    margin: 0 90px 0 90px;
   }
   main {
-    margin: 25px 60px 0 90px;
+    margin: 25px 90px 0 90px;
   }
 }
 
@@ -240,14 +283,19 @@ main {
 /* responsive Armir */
 
 @media (max-width: 865px) {
-  ul{
+  .page-menu {
     display: none;
   }
-  .bar{
+  .bar {
     display: flex;
     font-size: 35px;
     cursor: pointer;
     color: #fff;
+  }
+  .open {
+    display: block;
+    gap: 5px;
+    padding: 20px 10px;
   }
 }
 
@@ -255,9 +303,12 @@ main {
   main {
     margin: 25px 60px 0 60px;
   }
+  .navbar {
+    margin: 0px 60px 0 60px;
+  }
   .main-heading {
     width: 100%;
-    font-size: 75px;
+    font-size: 70px;
     flex-wrap: wrap;
   }
   .main-heading span {
@@ -269,5 +320,87 @@ main {
   .main-center {
     display: grid;
     margin-left: unset;
+  }
+  .main-img img {
+    width: 245px;
+    height: auto;
+  }
+}
+
+/* responsive Azizbek */
+
+@media screen and (max-width: 560px) {
+  main {
+    margin: 25px 30px 0 30px;
+  }
+  .navbar {
+    margin: 0 30px 0 30px;
+  }
+  .main-heading {
+    width: 100%;
+    font-size: 60px;
+    flex-wrap: wrap;
+  }
+  .main-heading span {
+    font-size: 65px;
+  }
+  .main-text {
+    width: 100%;
+    font-size: 16px;
+  }
+  .main-center {
+    display: none;
+  }
+  .footer {
+    margin-top: 30px;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .dropdown {
+    left: 15px;
+    right: 15px;
+    width: unset;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    margin: 25px 15px 0 15px;
+  }
+  .navbar {
+    margin: 0 15px 0 15px;
+  }
+  .navbar .page-logo {
+    width: 80px;
+    height: 80px;
+  }
+  .main-right {
+    gap: 50px;
+  }
+  .main-heading {
+    width: 100%;
+    font-size: 40px;
+    flex-wrap: wrap;
+  }
+  .main-heading span {
+    font-size: 40px;
+  }
+  .main-text {
+    display: none;
+  }
+  .main-btn {
+    margin-top: 20px;
+    font-size: 15px;
+    padding: 9px 20px 9px 20px;
+  }
+  .main-img img {
+    width: 195px;
+    height: auto;
+  }
+  .footer img {
+    width: 30px;
+    height: auto;
   }
 }
