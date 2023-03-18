@@ -12,6 +12,7 @@ body {
   height: 100vh;
 }
 
+
 /* navbar */
 
 .navbar {
@@ -139,6 +140,8 @@ main {
   align-items: center;
   justify-content: center;
   gap: 40px;
+  position: relative;
+  bottom: 5px;
 }
 
 .footer img {
@@ -159,4 +162,16 @@ main {
   50% {
     transform: translateY(15px);
   }
+}
+
+
+/* responsive Armir */
+
+@media(max-width: 1300px){
+  .navbar {
+    margin: 0 120px 0 90px;
+  }
+  main {
+    margin: 25px 60px 0 90px;
+  } 
 }
