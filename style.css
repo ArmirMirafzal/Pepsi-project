@@ -134,7 +134,6 @@ main {
 /* footer */
 
 .footer {
-  width: 99vw;
   display: flex;
   align-items: center;
   justify-content: center;
